@@ -14,14 +14,34 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-web</artifactId>
-    <version>4.2.0.RELEASE</version>
-</dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>4.2.0.RELEASE</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>my-webapp</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version> <!-- Update to the latest version -->
+        <configuration>
+          <source>1.8</source> <!-- Specify your Java version -->
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.3.0</version> <!-- Update to the latest version -->
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version> <!-- Update to the latest version -->
+      </plugin>
+    </plugins>
   </build>
 </project>
